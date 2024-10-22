@@ -1,0 +1,60 @@
+	package Asdm.diagram.edit.policies;
+
+	/**
+ * @generated
+ */
+public class DiagramaItemSemanticEditPolicy extends Asdm.diagram.edit.policies.AsdmBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public DiagramaItemSemanticEditPolicy() {
+				super(Asdm.diagram.providers.AsdmElementTypes.Diagrama_1000);
+	}
+
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getCreateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.CreateElementRequest req) {
+		if (Asdm.diagram.providers.AsdmElementTypes.Actividad_2001 == req.getElementType()) {
+	return getGEFWrapper(new Asdm.diagram.edit.commands.ActividadCreateCommand(req));
+}
+		if (Asdm.diagram.providers.AsdmElementTypes.Decision_2002 == req.getElementType()) {
+	return getGEFWrapper(new Asdm.diagram.edit.commands.DecisionCreateCommand(req));
+}
+		if (Asdm.diagram.providers.AsdmElementTypes.Ramificacion_2003 == req.getElementType()) {
+	return getGEFWrapper(new Asdm.diagram.edit.commands.RamificacionCreateCommand(req));
+}
+		if (Asdm.diagram.providers.AsdmElementTypes.NodoInicial_2004 == req.getElementType()) {
+	return getGEFWrapper(new Asdm.diagram.edit.commands.NodoInicialCreateCommand(req));
+}
+		if (Asdm.diagram.providers.AsdmElementTypes.NodoFinal_2005 == req.getElementType()) {
+	return getGEFWrapper(new Asdm.diagram.edit.commands.NodoFinalCreateCommand(req));
+}
+		return super.getCreateCommand(req);
+	}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gef.commands.Command getDuplicateCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = ((org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart) getHost()).getEditingDomain();
+	return getGEFWrapper(new DuplicateAnythingCommand(editingDomain, req));
+}
+	
+		/**
+ * @generated
+ */
+private static class DuplicateAnythingCommand extends org.eclipse.gmf.runtime.emf.commands.core.commands.DuplicateEObjectsCommand {
+
+		/**
+ * @generated
+ */
+public DuplicateAnythingCommand(org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain, org.eclipse.gmf.runtime.emf.type.core.requests.DuplicateElementsRequest req) {
+	super(editingDomain, req.getLabel(), req.getElementsToBeDuplicated(), req.getAllDuplicatedElementsMap());
+}
+
+	}
+	
+	}

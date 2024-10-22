@@ -1,0 +1,663 @@
+	package Asdm.diagram.part;
+
+	/**
+ * @generated
+ */
+public class AsdmDiagramUpdater {
+		
+		/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Asdm.diagram.part.AsdmVisualIDRegistry.getVisualID(view)) {
+		case Asdm.diagram.edit.parts.DiagramaEditPart.VISUAL_ID:
+	return getDiagrama_1000SemanticChildren(view);
+case Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartmentEditPart.VISUAL_ID:
+	return getActividadActividadSubdiagCompartment_7001SemanticChildren(view);
+case Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartment2EditPart.VISUAL_ID:
+	return getActividadActividadSubdiagCompartment_7002SemanticChildren(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmNodeDescriptor> getDiagrama_1000SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (!view.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Asdm.Diagrama modelElement = (Asdm.Diagrama) view.getElement();
+	java.util.LinkedList<Asdm.diagram.part.AsdmNodeDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getNodos().iterator(); it.hasNext();) {
+		Asdm.Nodo childElement = (Asdm.Nodo) it.next();
+					int visualID = Asdm.diagram.part.AsdmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Asdm.diagram.edit.parts.ActividadEditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.DecisionEditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.RamificacionEditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.NodoInicialEditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.NodoFinalEditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmNodeDescriptor> getActividadActividadSubdiagCompartment_7001SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Asdm.Actividad modelElement = (Asdm.Actividad) containerView.getElement();
+	java.util.LinkedList<Asdm.diagram.part.AsdmNodeDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getSubdiag().iterator(); it.hasNext();) {
+		Asdm.Nodo childElement = (Asdm.Nodo) it.next();
+					int visualID = Asdm.diagram.part.AsdmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+
+	/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmNodeDescriptor> getActividadActividadSubdiagCompartment_7002SemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+		if (false == view.eContainer() instanceof org.eclipse.gmf.runtime.notation.View) {
+	return java.util.Collections.emptyList();
+}
+org.eclipse.gmf.runtime.notation.View containerView = (org.eclipse.gmf.runtime.notation.View) view.eContainer();
+if (!containerView.isSetElement()) {
+	return java.util.Collections.emptyList();
+}
+Asdm.Actividad modelElement = (Asdm.Actividad) containerView.getElement();
+	java.util.LinkedList<Asdm.diagram.part.AsdmNodeDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmNodeDescriptor>();
+						for (java.util.Iterator<?> it = modelElement.getSubdiag().iterator(); it.hasNext();) {
+		Asdm.Nodo childElement = (Asdm.Nodo) it.next();
+					int visualID = Asdm.diagram.part.AsdmVisualIDRegistry.getNodeVisualID(view, childElement);
+			if (visualID == Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+if (visualID == Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID) {
+	result.add(new Asdm.diagram.part.AsdmNodeDescriptor(childElement, visualID));
+	continue;
+}
+	}
+			return result;
+	}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Asdm.diagram.part.AsdmVisualIDRegistry.getVisualID(view)) {
+		case Asdm.diagram.edit.parts.DiagramaEditPart.VISUAL_ID:
+	return getDiagrama_1000ContainedLinks(view);
+case Asdm.diagram.edit.parts.ActividadEditPart.VISUAL_ID:
+	return getActividad_2001ContainedLinks(view);
+case Asdm.diagram.edit.parts.DecisionEditPart.VISUAL_ID:
+	return getDecision_2002ContainedLinks(view);
+case Asdm.diagram.edit.parts.RamificacionEditPart.VISUAL_ID:
+	return getRamificacion_2003ContainedLinks(view);
+case Asdm.diagram.edit.parts.NodoInicialEditPart.VISUAL_ID:
+	return getNodoInicial_2004ContainedLinks(view);
+case Asdm.diagram.edit.parts.NodoFinalEditPart.VISUAL_ID:
+	return getNodoFinal_2005ContainedLinks(view);
+case Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID:
+	return getActividad_3001ContainedLinks(view);
+case Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID:
+	return getDecision_3002ContainedLinks(view);
+case Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID:
+	return getRamificacion_3003ContainedLinks(view);
+case Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID:
+	return getNodoInicial_3004ContainedLinks(view);
+case Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID:
+	return getNodoFinal_3005ContainedLinks(view);
+case Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID:
+	return getArista_4001ContainedLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Asdm.diagram.part.AsdmVisualIDRegistry.getVisualID(view)) {
+		case Asdm.diagram.edit.parts.ActividadEditPart.VISUAL_ID:
+	return getActividad_2001IncomingLinks(view);
+case Asdm.diagram.edit.parts.DecisionEditPart.VISUAL_ID:
+	return getDecision_2002IncomingLinks(view);
+case Asdm.diagram.edit.parts.RamificacionEditPart.VISUAL_ID:
+	return getRamificacion_2003IncomingLinks(view);
+case Asdm.diagram.edit.parts.NodoInicialEditPart.VISUAL_ID:
+	return getNodoInicial_2004IncomingLinks(view);
+case Asdm.diagram.edit.parts.NodoFinalEditPart.VISUAL_ID:
+	return getNodoFinal_2005IncomingLinks(view);
+case Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID:
+	return getActividad_3001IncomingLinks(view);
+case Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID:
+	return getDecision_3002IncomingLinks(view);
+case Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID:
+	return getRamificacion_3003IncomingLinks(view);
+case Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID:
+	return getNodoInicial_3004IncomingLinks(view);
+case Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID:
+	return getNodoFinal_3005IncomingLinks(view);
+case Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID:
+	return getArista_4001IncomingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+	
+		/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+		switch (Asdm.diagram.part.AsdmVisualIDRegistry.getVisualID(view)) {
+		case Asdm.diagram.edit.parts.ActividadEditPart.VISUAL_ID:
+	return getActividad_2001OutgoingLinks(view);
+case Asdm.diagram.edit.parts.DecisionEditPart.VISUAL_ID:
+	return getDecision_2002OutgoingLinks(view);
+case Asdm.diagram.edit.parts.RamificacionEditPart.VISUAL_ID:
+	return getRamificacion_2003OutgoingLinks(view);
+case Asdm.diagram.edit.parts.NodoInicialEditPart.VISUAL_ID:
+	return getNodoInicial_2004OutgoingLinks(view);
+case Asdm.diagram.edit.parts.NodoFinalEditPart.VISUAL_ID:
+	return getNodoFinal_2005OutgoingLinks(view);
+case Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID:
+	return getActividad_3001OutgoingLinks(view);
+case Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID:
+	return getDecision_3002OutgoingLinks(view);
+case Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID:
+	return getRamificacion_3003OutgoingLinks(view);
+case Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID:
+	return getNodoInicial_3004OutgoingLinks(view);
+case Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID:
+	return getNodoFinal_3005OutgoingLinks(view);
+case Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID:
+	return getArista_4001OutgoingLinks(view);
+	}
+		return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getDiagrama_1000ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Diagrama modelElement = (Asdm.Diagrama) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getActividad_2001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getDecision_2002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getRamificacion_2003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoInicial_2004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoFinal_2005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getActividad_3001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getDecision_3002ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getRamificacion_3003ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoInicial_3004ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoFinal_3005ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getArista_4001ContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getActividad_2001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Actividad modelElement = (Asdm.Actividad) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getDecision_2002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Decision modelElement = (Asdm.Decision) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getRamificacion_2003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Ramificacion modelElement = (Asdm.Ramificacion) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoInicial_2004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.NodoInicial modelElement = (Asdm.NodoInicial) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoFinal_2005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.NodoFinal modelElement = (Asdm.NodoFinal) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getActividad_3001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Actividad modelElement = (Asdm.Actividad) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getDecision_3002IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Decision modelElement = (Asdm.Decision) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getRamificacion_3003IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Ramificacion modelElement = (Asdm.Ramificacion) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoInicial_3004IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.NodoInicial modelElement = (Asdm.NodoInicial) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoFinal_3005IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.NodoFinal modelElement = (Asdm.NodoFinal) view.getElement();
+	java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences = org.eclipse.emf.ecore.util.EcoreUtil.CrossReferencer.find(view.eResource().getResourceSet().getResources());
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getIncomingTypeModelFacetLinks_Arista_4001(modelElement, crossReferences));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getArista_4001IncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+		
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getActividad_2001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Actividad modelElement = (Asdm.Actividad) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getDecision_2002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Decision modelElement = (Asdm.Decision) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getRamificacion_2003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Ramificacion modelElement = (Asdm.Ramificacion) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoInicial_2004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.NodoInicial modelElement = (Asdm.NodoInicial) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoFinal_2005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.NodoFinal modelElement = (Asdm.NodoFinal) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getActividad_3001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Actividad modelElement = (Asdm.Actividad) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getDecision_3002OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Decision modelElement = (Asdm.Decision) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getRamificacion_3003OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.Ramificacion modelElement = (Asdm.Ramificacion) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoInicial_3004OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.NodoInicial modelElement = (Asdm.NodoInicial) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getNodoFinal_3005OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	Asdm.NodoFinal modelElement = (Asdm.NodoFinal) view.getElement();
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_Arista_4001(modelElement));	
+	return result;
+}
+	
+/**
+ * @generated
+ */
+public static java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getArista_4001OutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+	return java.util.Collections.emptyList();
+}
+	
+	/**
+ * @generated
+ */
+private static java.util.Collection<Asdm.diagram.part.AsdmLinkDescriptor> getContainedTypeModelFacetLinks_Arista_4001(Asdm.Diagrama container) {
+	java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getAristas().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof Asdm.Arista) {
+		continue;
+	}
+	Asdm.Arista link = (Asdm.Arista) linkObject;
+		if (Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID != Asdm.diagram.part.AsdmVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			Asdm.Nodo dst = link.getDestino();
+							Asdm.Nodo src = link.getOrigen();
+							result.add(new Asdm.diagram.part.AsdmLinkDescriptor(src, dst, link, Asdm.diagram.providers.AsdmElementTypes.Arista_4001, Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+	
+/**
+ * @generated
+ */
+private static java.util.Collection<Asdm.diagram.part.AsdmLinkDescriptor> getIncomingTypeModelFacetLinks_Arista_4001(Asdm.Nodo target, java.util.Map<org.eclipse.emf.ecore.EObject, java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting>> crossReferences) {
+	java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+	java.util.Collection<org.eclipse.emf.ecore.EStructuralFeature.Setting> settings = crossReferences.get(target);
+	for (org.eclipse.emf.ecore.EStructuralFeature.Setting setting : settings) {
+		if (setting.getEStructuralFeature() != Asdm.AsdmPackage.eINSTANCE.getArista_Destino() || false == setting.getEObject() instanceof Asdm.Arista) {
+	continue;
+}
+Asdm.Arista link = (Asdm.Arista) setting.getEObject();
+	if (Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID != Asdm.diagram.part.AsdmVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+				Asdm.Nodo src = link.getOrigen();
+			result.add(new Asdm.diagram.part.AsdmLinkDescriptor(src, target, link, Asdm.diagram.providers.AsdmElementTypes.Arista_4001, Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+		}
+	return result;	
+}
+				
+		/**
+ * @generated
+ */
+private static java.util.Collection<Asdm.diagram.part.AsdmLinkDescriptor> getOutgoingTypeModelFacetLinks_Arista_4001(Asdm.Nodo source) {
+	Asdm.Diagrama container = null;
+	// Find container element for the link.
+	// Climb up by containment hierarchy starting from the source
+	// and return the first element that is instance of the container class.
+	for (org.eclipse.emf.ecore.EObject element = source; element != null && container == null; element = element.eContainer()) {
+		if (element instanceof Asdm.Diagrama) {
+			container = (Asdm.Diagrama) element;
+		}
+	}
+	if (container == null) {
+		return java.util.Collections.emptyList();
+	}
+		java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor> result = new java.util.LinkedList<Asdm.diagram.part.AsdmLinkDescriptor>();
+	for (java.util.Iterator<?> links = container.getAristas().iterator(); links.hasNext();) {
+	org.eclipse.emf.ecore.EObject linkObject = (org.eclipse.emf.ecore.EObject ) links.next();
+	if (false == linkObject instanceof Asdm.Arista) {
+		continue;
+	}
+	Asdm.Arista link = (Asdm.Arista) linkObject;
+		if (Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID != Asdm.diagram.part.AsdmVisualIDRegistry.getLinkWithClassVisualID(link)) {
+	continue;
+}
+			Asdm.Nodo dst = link.getDestino();
+							Asdm.Nodo src = link.getOrigen();
+								if (src != source) {
+	continue;
+}
+						result.add(new Asdm.diagram.part.AsdmLinkDescriptor(src, dst, link, Asdm.diagram.providers.AsdmElementTypes.Arista_4001, Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+		}
+	return result;	
+}		
+		
+					/**
+ * @generated
+ */
+	public static final org.eclipse.gmf.tooling.runtime.update.DiagramUpdater TYPED_INSTANCE = new org.eclipse.gmf.tooling.runtime.update.DiagramUpdater() {
+				/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<Asdm.diagram.part.AsdmNodeDescriptor> getSemanticChildren(org.eclipse.gmf.runtime.notation.View view) {
+			return AsdmDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getContainedLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return AsdmDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getIncomingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return AsdmDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+ * @generated
+ */
+		@Override
+
+		public java.util.List<Asdm.diagram.part.AsdmLinkDescriptor> getOutgoingLinks(org.eclipse.gmf.runtime.notation.View view) {
+			return AsdmDiagramUpdater.getOutgoingLinks(view);
+		}
+	}; 
+			
+	}

@@ -1,0 +1,24 @@
+package Asdm.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class AsdmModelingAssistantProviderOfDiagramaEditPart extends Asdm.diagram.providers.AsdmModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(5);
+					types.add(Asdm.diagram.providers.AsdmElementTypes.Actividad_2001);
+					types.add(Asdm.diagram.providers.AsdmElementTypes.Decision_2002);
+					types.add(Asdm.diagram.providers.AsdmElementTypes.Ramificacion_2003);
+					types.add(Asdm.diagram.providers.AsdmElementTypes.NodoInicial_2004);
+					types.add(Asdm.diagram.providers.AsdmElementTypes.NodoFinal_2005);
+					return types;	
+	}
+			
+	
+	}

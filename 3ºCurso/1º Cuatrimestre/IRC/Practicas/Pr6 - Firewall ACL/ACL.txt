@@ -1,0 +1,20 @@
+access-list 100 permit tcp any host 150.30.0.3 eq 80
+access-list 100 permit tcp any host 150.30.0.3 eq 443
+access-list 100 permit tcp any host 150.30.0.3 eq 53
+access-list 100 permit udp any host 150.30.0.3 eq 53
+access-list 100 permit tcp any host 150.30.0.2 eq 21
+access-list 100 permit tcp any host 150.30.0.2 eq 20
+access-list 100 deny ip any any
+
+access-list 101 permit tcp any 172.16.0.0 0.0.255.255 established
+access-list 101 permit udp host 150.30.0.100 eq 53 172.16.0.0 0.0.255.255
+access-list 101 deny ip any any
+
+
+int g0/0
+ip access-group 101 out
+exit
+
+int g0/1 
+ip access-group 100 out
+exit

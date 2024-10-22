@@ -1,0 +1,53 @@
+	package Asdm.diagram.navigator;
+
+	/**
+ * @generated
+ */
+public abstract class AsdmAbstractNavigatorItem extends org.eclipse.core.runtime.PlatformObject {
+
+
+		/**
+ * @generated
+ */
+static {
+	final Class[] supportedTypes = new Class[] { org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor.class };
+	final org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor propertySheetPageContributor = new org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor() {
+		public String getContributorId() {
+			return "Asdm.diagram";  //$NON-NLS-1$
+		}
+	};
+	org.eclipse.core.runtime.Platform.getAdapterManager().registerAdapters(new org.eclipse.core.runtime.IAdapterFactory() {
+		
+		public Object getAdapter(Object adaptableObject, Class adapterType) {
+			if (adaptableObject instanceof Asdm.diagram.navigator.AsdmAbstractNavigatorItem && adapterType == org.eclipse.ui.views.properties.tabbed.ITabbedPropertySheetPageContributor.class) {
+				return propertySheetPageContributor;				
+			}
+			return null;
+		}
+
+		public Class[] getAdapterList() {
+			return supportedTypes;
+		}
+	}, Asdm.diagram.navigator.AsdmAbstractNavigatorItem.class);
+}
+	
+		/**
+ * @generated
+ */
+private Object myParent;
+	
+		/**
+ * @generated
+ */
+protected AsdmAbstractNavigatorItem(Object parent) {
+	myParent = parent;
+}
+	
+		/**
+ * @generated
+ */
+public Object getParent() {
+	return myParent;
+}
+
+	}

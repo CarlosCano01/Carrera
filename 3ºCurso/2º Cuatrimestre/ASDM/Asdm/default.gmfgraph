@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition">
+  <gmfgraph:Canvas name="Asdm">
+    <figures name="Default">
+      <figures xsi:type="gmfgraph:PolylineDecoration" name="AristaFigureTargetDecoration"/>
+      <descriptors name="ActividadFigure">
+        <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ActividadFigure">
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <children xsi:type="gmfgraph:Label" name="ActividadLabelFigure" text="Actividad">
+            <maximumSize dx="10000" dy="50"/>
+          </children>
+          <children xsi:type="gmfgraph:Rectangle" name="ActividadSubdiagCompartmentFigure" outline="false"/>
+        </actualFigure>
+        <accessors accessor="getFigureActividadLabelFigure" figure="/0/@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+        <accessors accessor="getActividadSubdiagCompartmentFigure" figure="/0/@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      </descriptors>
+      <descriptors name="DecisionFigure">
+        <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="DecisionFigure">
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <template x="20"/>
+          <template x="40" y="20"/>
+          <template x="20" y="40"/>
+          <template y="20"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="RamificacionFigure">
+        <actualFigure xsi:type="gmfgraph:ScalablePolygon" name="RamificacionFigure">
+          <backgroundColor xsi:type="gmfgraph:RGBColor"/>
+          <preferredSize dx="10" dy="40"/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+          <template/>
+          <template x="10"/>
+          <template x="10" y="40"/>
+          <template y="40"/>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="NodoInicialFigure">
+        <actualFigure xsi:type="gmfgraph:SVGFigure" name="NodoInicialFigure" documentURI="platform:/plugin/dsdm.eugenia/iconos/nodo-inicial.svg">
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="NodoFinalFigure">
+        <actualFigure xsi:type="gmfgraph:SVGFigure" name="NodoFinalFigure" documentURI="platform:/plugin/dsdm.eugenia/iconos/nodo-final.svg">
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets top="5" left="5" bottom="5" right="5"/>
+          </border>
+        </actualFigure>
+      </descriptors>
+      <descriptors name="AristaFigure">
+        <actualFigure xsi:type="gmfgraph:PolylineConnection" name="AristaFigure" targetDecoration="/0/@figures.0/@figures.0"/>
+      </descriptors>
+      <descriptors name="AristaLabelFigure">
+        <actualFigure xsi:type="gmfgraph:Label" name="AristaLabelLabel" text="Arista"/>
+      </descriptors>
+    </figures>
+    <nodes name="Actividad" figure="ActividadFigure"/>
+    <nodes name="Decision" figure="DecisionFigure"/>
+    <nodes name="Ramificacion" figure="RamificacionFigure">
+      <facets xsi:type="gmfgraph:DefaultSizeFacet">
+        <defaultSize dx="10" dy="40"/>
+      </facets>
+    </nodes>
+    <nodes name="NodoInicial" figure="NodoInicialFigure"/>
+    <nodes name="NodoFinal" figure="NodoFinalFigure"/>
+    <connections name="Arista" figure="AristaFigure"/>
+    <compartments name="ActividadSubdiagCompartment" figure="ActividadFigure" collapsible="true" accessor="/0/@figures.0/@descriptors.0/@accessors.1"/>
+    <labels name="ActividadLabel" figure="ActividadFigure" elementIcon="false" accessor="/0/@figures.0/@descriptors.0/@accessors.0"/>
+    <labels name="AristaLabel" figure="AristaLabelFigure" elementIcon="false"/>
+  </gmfgraph:Canvas>
+  <gmfgraph:Label name="DecisionLabelFigure" text="Decision"/>
+  <gmfgraph:Label name="RamificacionLabelFigure" text="Ramificacion"/>
+  <gmfgraph:Label name="NodoInicialLabelFigure" text="NodoInicial"/>
+  <gmfgraph:Label name="NodoFinalLabelFigure" text="NodoFinal"/>
+</xmi:XMI>

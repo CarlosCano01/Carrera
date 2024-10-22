@@ -1,0 +1,607 @@
+	package Asdm.diagram.navigator;
+
+/**
+ * @generated
+ */
+public class AsdmNavigatorContentProvider implements org.eclipse.ui.navigator.ICommonContentProvider {
+
+		/**
+ * @generated
+ */
+private static final Object[] EMPTY_ARRAY = new Object[0];
+
+	/**
+ * @generated
+ */
+private org.eclipse.jface.viewers.Viewer myViewer;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain myEditingDomain;
+
+	/**
+ * @generated
+ */
+private org.eclipse.emf.workspace.util.WorkspaceSynchronizer myWorkspaceSynchronizer;
+
+	/**
+ * @generated
+ */
+private Runnable myViewerRefreshRunnable;
+	
+	/**
+ * @generated
+ */
+@SuppressWarnings({ "unchecked", "serial", "rawtypes" })
+public AsdmNavigatorContentProvider() {
+	org.eclipse.emf.transaction.TransactionalEditingDomain editingDomain = org.eclipse.gmf.runtime.emf.core.GMFEditingDomainFactory.INSTANCE.createEditingDomain();
+myEditingDomain = (org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain) editingDomain;
+myEditingDomain.setResourceToReadOnlyMap(new java.util.HashMap() {
+	public Object get(Object key) {
+		if (!containsKey(key)) {
+			put(key, Boolean.TRUE);
+		}
+		return super.get(key);
+	}
+});
+myViewerRefreshRunnable = new Runnable() {
+	public void run() {
+		if (myViewer != null) {
+			myViewer.refresh();
+		}
+	}
+};
+myWorkspaceSynchronizer = new org.eclipse.emf.workspace.util.WorkspaceSynchronizer(editingDomain, new org.eclipse.emf.workspace.util.WorkspaceSynchronizer.Delegate() {
+	public void dispose() {
+	}
+
+	public boolean handleResourceChanged(final org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceDeleted(org.eclipse.emf.ecore.resource.Resource resource) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+	
+	public boolean handleResourceMoved(org.eclipse.emf.ecore.resource.Resource resource, final org.eclipse.emf.common.util.URI newURI) {
+		unloadAllResources();
+asyncRefresh();
+return true;
+	}
+});
+}
+
+		/**
+ * @generated
+ */
+public void dispose() {
+	myWorkspaceSynchronizer.dispose();
+	myWorkspaceSynchronizer = null;
+	myViewerRefreshRunnable = null;
+	myViewer = null;
+	unloadAllResources();
+	((org.eclipse.emf.transaction.TransactionalEditingDomain) myEditingDomain).dispose();
+	myEditingDomain = null;
+}
+	
+		/**
+ * @generated
+ */
+public void inputChanged(org.eclipse.jface.viewers.Viewer viewer, Object oldInput, Object newInput) {
+	myViewer = viewer;
+}
+	
+	
+	/**
+ * @generated
+ */
+	void unloadAllResources() {
+		for (org.eclipse.emf.ecore.resource.Resource nextResource : myEditingDomain.getResourceSet().getResources()) {
+			nextResource.unload();
+		}
+	}
+	
+	/**
+ * @generated
+ */
+	void asyncRefresh() {
+		if (myViewer != null && !myViewer.getControl().isDisposed()) {
+			myViewer.getControl().getDisplay().asyncExec(myViewerRefreshRunnable);
+		}
+	}
+	
+	/**
+ * @generated
+ */
+public Object[] getElements(Object inputElement) {
+	return getChildren(inputElement);
+}
+	
+	/**
+ * @generated
+ */
+public void restoreState(org.eclipse.ui.IMemento aMemento) {
+}
+
+/**
+ * @generated
+ */
+public void saveState(org.eclipse.ui.IMemento aMemento) {
+}
+    
+    /**
+ * @generated
+ */
+public void init(org.eclipse.ui.navigator.ICommonContentExtensionSite aConfig) {
+}
+    
+    	/**
+ * @generated
+ */
+public Object[] getChildren(Object parentElement) {
+	if (parentElement instanceof org.eclipse.core.resources.IFile) {
+		org.eclipse.core.resources.IFile file = (org.eclipse.core.resources.IFile) parentElement;
+org.eclipse.emf.common.util.URI fileURI = org.eclipse.emf.common.util.URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+org.eclipse.emf.ecore.resource.Resource resource = myEditingDomain.getResourceSet().getResource(fileURI, true);
+	java.util.ArrayList<Asdm.diagram.navigator.AsdmNavigatorItem> result = new java.util.ArrayList<Asdm.diagram.navigator.AsdmNavigatorItem>();
+					java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> topViews = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>(resource.getContents().size());
+		for (org.eclipse.emf.ecore.EObject o : resource.getContents()) {
+			if (o instanceof org.eclipse.gmf.runtime.notation.View) {
+				topViews.add((org.eclipse.gmf.runtime.notation.View) o);
+			}
+		}
+					result.addAll(createNavigatorItems(selectViewsByType(topViews, Asdm.diagram.edit.parts.DiagramaEditPart.MODEL_ID), file, false));
+						return result.toArray();
+   	} 
+    	
+   	if (parentElement instanceof Asdm.diagram.navigator.AsdmNavigatorGroup) {
+	Asdm.diagram.navigator.AsdmNavigatorGroup group = (Asdm.diagram.navigator.AsdmNavigatorGroup) parentElement;
+return group.getChildren();
+	} 
+		
+	if (parentElement instanceof Asdm.diagram.navigator.AsdmNavigatorItem) {
+	Asdm.diagram.navigator.AsdmNavigatorItem navigatorItem = (Asdm.diagram.navigator.AsdmNavigatorItem) parentElement;
+if (navigatorItem.isLeaf() || !isOwnView(navigatorItem.getView())) {
+	return EMPTY_ARRAY;
+}
+return getViewChildren(navigatorItem.getView(), parentElement);
+	}
+		
+		return EMPTY_ARRAY;
+}
+    
+	/**
+ * @generated
+ */
+private Object[] getViewChildren(org.eclipse.gmf.runtime.notation.View view, Object parentElement) {
+   	switch (Asdm.diagram.part.AsdmVisualIDRegistry.getVisualID(view)) {
+	
+case Asdm.diagram.edit.parts.DiagramaEditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Diagram sv = (org.eclipse.gmf.runtime.notation.Diagram) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup links = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Diagrama_1000_links,
+	"icons/linksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.DecisionEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.RamificacionEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoInicialEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoFinalEditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getDiagramLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								links.addChildren(createNavigatorItems(connectedViews, links, false));
+															if (!links.isEmpty()) {		result.add(links);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.ActividadEditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Actividad_2001_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Actividad_2001_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartmentEditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.DecisionEditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Decision_2002_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Decision_2002_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.RamificacionEditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Ramificacion_2003_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Ramificacion_2003_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.NodoInicialEditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_NodoInicial_2004_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_NodoInicial_2004_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.NodoFinalEditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_NodoFinal_2005_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_NodoFinal_2005_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Actividad_3001_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Actividad_3001_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 						getChildrenByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadActividadSubdiagCompartment2EditPart.VISUAL_ID));
+									connectedViews = 						getChildrenByType						(connectedViews					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID));
+								result.addAll(createNavigatorItems(connectedViews, parentElement, false));
+																	connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Decision_3002_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Decision_3002_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Ramificacion_3003_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Ramificacion_3003_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_NodoInicial_3004_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_NodoInicial_3004_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Node sv = (org.eclipse.gmf.runtime.notation.Node) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup incominglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_NodoFinal_3005_incominglinks,
+	"icons/incomingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup outgoinglinks = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_NodoFinal_3005_outgoinglinks,
+	"icons/outgoingLinksNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 			getIncomingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								incominglinks.addChildren(createNavigatorItems(connectedViews, incominglinks, true));
+																	connectedViews = 			getOutgoingLinksByType						(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID));
+								outgoinglinks.addChildren(createNavigatorItems(connectedViews, outgoinglinks, true));
+															if (!incominglinks.isEmpty()) {		result.add(incominglinks);
+					}							if (!outgoinglinks.isEmpty()) {		result.add(outgoinglinks);
+					}			return result.toArray();
+}
+
+case Asdm.diagram.edit.parts.AristaEditPart.VISUAL_ID: {
+	java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem> result = new java.util.LinkedList<Asdm.diagram.navigator.AsdmAbstractNavigatorItem>();
+		org.eclipse.gmf.runtime.notation.Edge sv = (org.eclipse.gmf.runtime.notation.Edge) view;
+				Asdm.diagram.navigator.AsdmNavigatorGroup target = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Arista_4001_target,
+	"icons/linkTargetNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+	Asdm.diagram.navigator.AsdmNavigatorGroup source = new Asdm.diagram.navigator.AsdmNavigatorGroup(
+	Asdm.diagram.part.Messages.NavigatorGroupName_Arista_4001_source,
+	"icons/linkSourceNavigatorGroup.gif", parentElement);  //$NON-NLS-1$
+				java.util.Collection<org.eclipse.gmf.runtime.notation.View> connectedViews;
+														connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.DecisionEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.RamificacionEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoInicialEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoFinalEditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksTargetByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID));
+								target.addChildren(createNavigatorItems(connectedViews, target, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.ActividadEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.DecisionEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.RamificacionEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoInicialEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoFinalEditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Actividad2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Decision2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.Ramificacion2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoInicial2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+																	connectedViews = 	getLinksSourceByType					(java.util.Collections.singleton(sv)					, Asdm.diagram.part.AsdmVisualIDRegistry.getType(Asdm.diagram.edit.parts.NodoFinal2EditPart.VISUAL_ID));
+								source.addChildren(createNavigatorItems(connectedViews, source, true));
+															if (!target.isEmpty()) {		result.add(target);
+					}							if (!source.isEmpty()) {		result.add(source);
+					}			return result.toArray();
+}
+	}
+	return EMPTY_ARRAY;
+}
+    
+    /**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksSourceByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeSource = nextEdge.getSource();
+ 		if (type.equals(nextEdgeSource.getType()) && isOwnView(nextEdgeSource)) {
+ 			result.add(nextEdgeSource);
+ 		}
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getLinksTargetByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Edge> edges, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.Edge nextEdge : edges) {
+ 		org.eclipse.gmf.runtime.notation.View nextEdgeTarget = nextEdge.getTarget();
+ 		if (type.equals(nextEdgeTarget.getType()) && isOwnView(nextEdgeTarget)) {
+ 			result.add(nextEdgeTarget);
+ 		}
+ 	}
+ 	return result;
+}
+
+/**
+ * @generated
+ */
+ private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getOutgoingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getSourceEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getIncomingLinksByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+ 	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getTargetEdges(), type));
+ 	}
+ 	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getChildrenByType(java.util.Collection<? extends org.eclipse.gmf.runtime.notation.View> nodes, String type) {
+	java.util.LinkedList<org.eclipse.gmf.runtime.notation.View> result = new java.util.LinkedList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextNode : nodes) {
+		result.addAll(selectViewsByType(nextNode.getChildren(), type));
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> getDiagramLinksByType(java.util.Collection<org.eclipse.gmf.runtime.notation.Diagram> diagrams, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.Diagram nextDiagram : diagrams) {
+		result.addAll(selectViewsByType(nextDiagram.getEdges(), type));
+	}
+	return result;
+}
+
+// TODO refactor as static method
+/**
+ * @generated
+ */
+private java.util.Collection<org.eclipse.gmf.runtime.notation.View> selectViewsByType(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, String type) {
+	java.util.ArrayList<org.eclipse.gmf.runtime.notation.View> result = new java.util.ArrayList<org.eclipse.gmf.runtime.notation.View>();
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		if (type.equals(nextView.getType()) && isOwnView(nextView)) {
+			result.add(nextView);
+		}
+	}
+	return result;
+}
+	
+/**
+ * @generated
+ */
+private boolean isOwnView(org.eclipse.gmf.runtime.notation.View view) {
+	return Asdm.diagram.edit.parts.DiagramaEditPart.MODEL_ID.equals(Asdm.diagram.part.AsdmVisualIDRegistry.getModelID(view));
+}
+	
+/**
+ * @generated
+ */
+private java.util.Collection<Asdm.diagram.navigator.AsdmNavigatorItem> createNavigatorItems(java.util.Collection<org.eclipse.gmf.runtime.notation.View> views, Object parent, boolean isLeafs) {
+	java.util.ArrayList<Asdm.diagram.navigator.AsdmNavigatorItem> result = new java.util.ArrayList<Asdm.diagram.navigator.AsdmNavigatorItem>(views.size());
+	for (org.eclipse.gmf.runtime.notation.View nextView : views) {
+		result.add(new Asdm.diagram.navigator.AsdmNavigatorItem(nextView, parent, isLeafs));
+	}
+	return result;
+}
+		
+	/**
+ * @generated
+ */
+public Object getParent(Object element) {
+	if (element instanceof Asdm.diagram.navigator.AsdmAbstractNavigatorItem) {
+    	Asdm.diagram.navigator.AsdmAbstractNavigatorItem abstractNavigatorItem = (Asdm.diagram.navigator.AsdmAbstractNavigatorItem) element;
+		return abstractNavigatorItem.getParent();
+	}
+	return null;
+}
+	
+	/**
+ * @generated
+ */
+public boolean hasChildren(Object element) {
+	return element instanceof org.eclipse.core.resources.IFile || getChildren(element).length > 0;
+}
+    
+    }

@@ -1,0 +1,15 @@
+package Asdm.diagram.providers;
+
+/**
+ * @generated
+ */
+public class AsdmIconProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultElementTypeIconProvider implements org.eclipse.gmf.runtime.common.ui.services.icon.IIconProvider {
+
+		/**
+ * @generated
+ */
+	public AsdmIconProvider() {
+		super(Asdm.diagram.providers.AsdmElementTypes.TYPED_INSTANCE);
+	}
+
+	}

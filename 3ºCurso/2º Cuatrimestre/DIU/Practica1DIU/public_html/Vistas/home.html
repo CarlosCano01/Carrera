@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../Css/estilos.css" />
+    </head>
+    <body>
+        
+        <header>
+            <div class="logo">
+                <a href="home.html"><img src="../Imagenes/tele.png" alt="Logo"></a>
+            </div>
+            <div class="titulo">
+                <a href="home.html"><h1>LA GUIA</h1></a>
+            </div>
+        </header>
+
+        <form id="filtro">
+            <table border="1">
+                <tr>
+                    <td>
+                        <div>
+                            <label for="fecha">Selecciona un día </label>
+                            <input type="date" id="fecha" name="fecha">
+
+                            <label for="hora">Selecciona una hora </label>
+                            <input type="time" id="hora" name="hora">
+
+                            <label for="opcion">Selecciona un canal </label>
+                            <select id="opcion" name="opcion">
+                                <option value="Ninguna"> </option>
+                                <option value="La 1">La 1</option>
+                                <option value="La 2">La 2</option>
+                                <option value="Antena 3">Antena 3</option>
+                            </select>
+                        </div>  
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <a href="home_selecionado.html" id="boton">Filtar</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+
+
+        <h2> Canales de televisón</h2>
+
+        <section>
+
+            <a href="canal.html" ><img src="../Imagenes/1.png" alt="la1"/></a>
+            <a href="canal.html" ><img src="../Imagenes/La2.png" alt="la2"/></a>
+            <a href="canal.html" ><img src="../Imagenes/Antena3.png" alt="antena3"/></a>
+            <a href="canal.html" ><img src="../Imagenes/Telecinco.png" alt="telecinco"/></a>
+            <a href="canal.html" ><img src="../Imagenes/La6.jpg" alt="la6"/></a>
+
+        </section>
+
+
+
+
+
+
+    </body>
+    <footer>
+        <ul id="pie">
+            <li class="izquierda">&copy; Carlos Cano Espinosa -  2024</li>
+            <li class="derecha"> webmaster: carlos.cano492@alu.uhu.es</li>
+        </ul>
+    </footer>
+</html>

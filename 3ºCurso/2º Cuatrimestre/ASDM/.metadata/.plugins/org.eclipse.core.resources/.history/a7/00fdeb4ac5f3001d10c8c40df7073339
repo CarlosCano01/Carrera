@@ -1,0 +1,26 @@
+
+package Asdm.diagram.sheet;
+
+/**
+ * @generated
+ */
+public class AsdmPropertySection extends org.eclipse.gmf.tooling.runtime.sheet.DefaultPropertySection implements org.eclipse.ui.views.properties.IPropertySourceProvider{
+
+
+
+
+	/**
+ * Modify/unwrap selection.
+ * @generated
+ */
+	@Override
+	protected Object transformSelection(Object selected) {
+				selected = /*super.*/transformSelectionToDomain(selected);
+		return selected;
+	}
+
+
+
+
+
+}

@@ -1,0 +1,120 @@
+
+package Asdm.diagram.part;
+
+/**
+ * @generated
+ */
+public class AsdmPaletteFactory {
+
+	/**
+ * @generated
+ */
+	public void fillPalette(org.eclipse.gef.palette.PaletteRoot paletteRoot) {
+		paletteRoot.add(createObjects1Group());
+paletteRoot.add(createConnections2Group());
+	}
+
+	/**
+ * Creates "Objects" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createObjects1Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(Asdm.diagram.part.Messages.Objects1Group_title);
+				 paletteContainer.setId("createObjects1Group"); //$NON-NLS-1$
+								paletteContainer.add(createActividad1CreationTool());
+paletteContainer.add(createDecisión2CreationTool());
+paletteContainer.add(createNodofinal3CreationTool());
+paletteContainer.add(createNodoinicial4CreationTool());
+paletteContainer.add(createRamificación5CreationTool());
+		return paletteContainer;
+	}
+	/**
+ * Creates "Connections" palette tool group
+ * @generated
+ */
+	private org.eclipse.gef.palette.PaletteContainer createConnections2Group() {
+				org.eclipse.gef.palette.PaletteDrawer paletteContainer = new org.eclipse.gef.palette.PaletteDrawer(Asdm.diagram.part.Messages.Connections2Group_title);
+				 paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
+								paletteContainer.add(createArista1CreationTool());
+		return paletteContainer;
+	}
+
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createActividad1CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(Asdm.diagram.providers.AsdmElementTypes.Actividad_2001);
+types.add(Asdm.diagram.providers.AsdmElementTypes.Actividad_3001);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(Asdm.diagram.part.Messages.Actividad1CreationTool_title, Asdm.diagram.part.Messages.Actividad1CreationTool_desc, types);
+				 entry.setId("createActividad1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(Asdm.diagram.providers.AsdmElementTypes.getImageDescriptor(Asdm.diagram.providers.AsdmElementTypes.Actividad_2001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createDecisión2CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(Asdm.diagram.providers.AsdmElementTypes.Decision_3002);
+types.add(Asdm.diagram.providers.AsdmElementTypes.Decision_2002);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(Asdm.diagram.part.Messages.Decisión2CreationTool_title, Asdm.diagram.part.Messages.Decisión2CreationTool_desc, types);
+				 entry.setId("createDecisión2CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(Asdm.diagram.providers.AsdmElementTypes.getImageDescriptor(Asdm.diagram.providers.AsdmElementTypes.Decision_3002));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createNodofinal3CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(Asdm.diagram.providers.AsdmElementTypes.NodoFinal_3005);
+types.add(Asdm.diagram.providers.AsdmElementTypes.NodoFinal_2005);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(Asdm.diagram.part.Messages.Nodofinal3CreationTool_title, Asdm.diagram.part.Messages.Nodofinal3CreationTool_desc, types);
+				 entry.setId("createNodofinal3CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(Asdm.diagram.providers.AsdmElementTypes.getImageDescriptor(Asdm.diagram.providers.AsdmElementTypes.NodoFinal_3005));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createNodoinicial4CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(Asdm.diagram.providers.AsdmElementTypes.NodoInicial_3004);
+types.add(Asdm.diagram.providers.AsdmElementTypes.NodoInicial_2004);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(Asdm.diagram.part.Messages.Nodoinicial4CreationTool_title, Asdm.diagram.part.Messages.Nodoinicial4CreationTool_desc, types);
+				 entry.setId("createNodoinicial4CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(Asdm.diagram.providers.AsdmElementTypes.getImageDescriptor(Asdm.diagram.providers.AsdmElementTypes.NodoInicial_3004));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createRamificación5CreationTool() {
+		java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(2);
+types.add(Asdm.diagram.providers.AsdmElementTypes.Ramificacion_3003);
+types.add(Asdm.diagram.providers.AsdmElementTypes.Ramificacion_2003);
+org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultNodeToolEntry(Asdm.diagram.part.Messages.Ramificación5CreationTool_title, Asdm.diagram.part.Messages.Ramificación5CreationTool_desc, types);
+				 entry.setId("createRamificación5CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(Asdm.diagram.providers.AsdmElementTypes.getImageDescriptor(Asdm.diagram.providers.AsdmElementTypes.Ramificacion_3003));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+	/**
+ * @generated
+ */
+	private org.eclipse.gef.palette.ToolEntry createArista1CreationTool() {
+		org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry entry = new org.eclipse.gmf.tooling.runtime.part.DefaultLinkToolEntry(Asdm.diagram.part.Messages.Arista1CreationTool_title, Asdm.diagram.part.Messages.Arista1CreationTool_desc, java.util.Collections.singletonList(Asdm.diagram.providers.AsdmElementTypes.Arista_4001));
+				 entry.setId("createArista1CreationTool"); //$NON-NLS-1$
+		entry.setSmallIcon(Asdm.diagram.providers.AsdmElementTypes.getImageDescriptor(Asdm.diagram.providers.AsdmElementTypes.Arista_4001));
+		entry.setLargeIcon(entry.getSmallIcon());
+						return entry;
+	}
+
+
+		
+}

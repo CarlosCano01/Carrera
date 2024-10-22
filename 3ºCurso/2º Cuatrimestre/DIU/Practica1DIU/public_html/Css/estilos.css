@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+/* Estilos del encabezado */
+
+header {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px;
+    background-color: #3b83bd; /* Color de fondo de la cabecera */
+    color: white; /* Color del texto */
+}
+
+.logo img {
+    max-width: 100px; /* Ancho máximo de la imagen del logo */
+}
+
+.titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    flex-grow: 1; /* Permite que este div crezca para ocupar el espacio restante */
+}
+
+.logo a, .titulo a {
+    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+    color: white; /* Color del texto del enlace */
+}
+
+/* Estilos del formulario */
+
+#filtro {
+    margin-top: 30px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+}
+
+#filtro table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+#filtro table tr td {
+    border: none;
+    text-align: center; /* Centra el contenido horizontalmente en las celdas */
+    vertical-align: middle; /* Centra el contenido verticalmente en las celdas */
+    padding: 10px; /* Espacio alrededor del contenido de las celdas */
+}
+
+#filtro table tr td div {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+#filtro table tr td div label {
+    margin-right: 15px;
+}
+
+#boton {
+    padding: 10px 20px;
+    background-color: #3b83bd;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Estilos del select de home */
+
+input[type="date"],
+input[type="time"],
+select {
+    border: 2px solid #ccc;
+    border-radius: 20px; /* Ajusta este valor para cambiar el grado de redondez */
+    margin-right: 30px;
+    width: 11%;
+}
+
+/* Estilos de la sección de imágenes */
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+section a {
+    display: flex;
+    width: 400px;
+    height: 430px;
+}
+
+section a img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: .5s ease;
+}
+
+section a img:hover {
+    margin: 30px;
+    opacity: 1;
+    filter: contrast(140%);
+}
+
+h2 {
+    margin: 30px;
+    font-family: 'Pacifico', cursive;
+}
+
+/* Estilos de la tabla del canal */
+
+#contenedortabla {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#Guia {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+
+
+}
+
+#Guia td {
+    text-align: center;
+    padding: 8px;
+}
+
+
+#Guia th {
+    padding: 8px;
+}
+
+
+#Guia caption {
+    margin-bottom: 10px;
+}
+
+#Guia tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#Guia tr:hover {
+    background-color: #f2f2f2;
+}
+
+#Guia a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+#Guia a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+#Guia caption img {
+    max-width: 200px; /* Adjust the size as needed */
+    height: auto;
+}
+
+
+.imagenselecion {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+}
+
+.imagenselecion a {
+    display: inline-block; /* Para asegurar que la etiqueta 'a' ocupe solo el ancho que necesite */
+}
+
+.imagenselecion img{
+    width: 100px;
+    height: auto;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la imagen */
+    align-items: center; /* Centra verticalmente la imagen */
+}
+
+h3{
+    margin-left: 50px;
+    font-family: 'Pacifico', cursive;
+}
+
+.descripcion-cuadro {
+    margin:50px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.descripcion-cuadro label {
+    display: block; /* Hacer que el label sea de bloque para ocupar toda la anchura */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 5px; /* Espaciado inferior */
+}
+
+
+/* Estilos del pie de página */
+
+footer {
+    background-color: #3b83bd;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#pie {
+    list-style: none;
+    padding: 0;
+}
+
+#pie li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.izquierda {
+    float: left;
+}
+
+.derecha {
+    float: right;
+}

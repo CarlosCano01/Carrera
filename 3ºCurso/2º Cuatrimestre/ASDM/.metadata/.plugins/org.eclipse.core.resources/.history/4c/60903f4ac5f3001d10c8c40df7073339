@@ -1,0 +1,231 @@
+	package Asdm.diagram.part;
+
+	/**
+ * @generated
+ */
+public class AsdmDiagramEditor  extends org.eclipse.gmf.runtime.diagram.ui.resources.editor.parts.DiagramDocumentEditor implements org.eclipse.ui.ide.IGotoMarker {
+
+		/**
+ * @generated
+ */
+public static final String ID = "Asdm.diagram.part.AsdmDiagramEditorID";  //$NON-NLS-1$
+	
+	/**
+ * @generated
+ */
+public static final String CONTEXT_ID = "Asdm.diagram.ui.diagramContext";  //$NON-NLS-1$
+	
+		
+		/**
+ * @generated
+ */
+public AsdmDiagramEditor() {
+	super(true);
+}
+	
+		/**
+ * @generated
+ */
+protected String getContextID() {
+	return CONTEXT_ID;
+}
+	
+	/**
+ * @generated
+ */
+protected org.eclipse.gef.palette.PaletteRoot createPaletteRoot(org.eclipse.gef.palette.PaletteRoot existingPaletteRoot) {
+	org.eclipse.gef.palette.PaletteRoot root = super.createPaletteRoot(existingPaletteRoot);
+	new Asdm.diagram.part.AsdmPaletteFactory().fillPalette(root);
+	return root;
+}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gmf.runtime.diagram.core.preferences.PreferencesHint getPreferencesHint() {
+	return Asdm.diagram.part.AsdmDiagramEditorPlugin.DIAGRAM_PREFERENCES_HINT;
+}
+	
+		/**
+ * @generated
+ */
+public String getContributorId() {
+	return Asdm.diagram.part.AsdmDiagramEditorPlugin.ID;
+}
+		
+/**
+ * @generated
+ */
+@SuppressWarnings("rawtypes")
+public Object getAdapter(Class type) {
+			if (type == org.eclipse.ui.part.IShowInTargetList.class) {
+		return new org.eclipse.ui.part.IShowInTargetList() {
+			public String[] getShowInTargetIds() {
+				return new String[] { org.eclipse.ui.navigator.resources.ProjectExplorer.VIEW_ID };
+			}
+		};
+	}
+		return super.getAdapter(type);
+}
+	
+		/**
+ * @generated
+ */
+protected org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocumentProvider getDocumentProvider(org.eclipse.ui.IEditorInput input) {
+	if (input instanceof org.eclipse.ui.IFileEditorInput || input instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		return Asdm.diagram.part.AsdmDiagramEditorPlugin.getInstance().getDocumentProvider();
+	}
+	return super.getDocumentProvider(input);
+}
+	
+		/**
+ * @generated
+ */
+public org.eclipse.emf.transaction.TransactionalEditingDomain getEditingDomain() {
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocument document = getEditorInput() != null ? getDocumentProvider().getDocument(getEditorInput()) : null;
+	if (document instanceof org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument) {
+		return ((org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument) document).getEditingDomain();
+	}
+	return super.getEditingDomain();
+}
+	
+		/**
+ * @generated
+ */
+protected void setDocumentProvider(org.eclipse.ui.IEditorInput input) {
+	if (input instanceof org.eclipse.ui.IFileEditorInput || input instanceof org.eclipse.emf.common.ui.URIEditorInput) {
+		setDocumentProvider(Asdm.diagram.part.AsdmDiagramEditorPlugin.getInstance().getDocumentProvider());
+	} else {
+		super.setDocumentProvider(input);
+	}
+}
+		
+			/**
+ * @generated
+ */
+public void gotoMarker(org.eclipse.core.resources.IMarker marker) {
+	org.eclipse.gmf.runtime.common.ui.services.marker.MarkerNavigationService.getInstance().gotoMarker(this, marker);
+}
+		
+			/**
+ * @generated
+ */
+public boolean isSaveAsAllowed() {
+	return true;
+}
+		
+			/**
+ * @generated
+ */
+public void doSaveAs() {
+	performSaveAs(new org.eclipse.core.runtime.NullProgressMonitor());
+}
+		
+			/**
+ * @generated
+ */
+protected void performSaveAs(org.eclipse.core.runtime.IProgressMonitor progressMonitor) {
+	org.eclipse.swt.widgets.Shell shell = getSite().getShell();
+	org.eclipse.ui.IEditorInput input = getEditorInput();
+	org.eclipse.ui.dialogs.SaveAsDialog dialog = new org.eclipse.ui.dialogs.SaveAsDialog(shell);
+	org.eclipse.core.resources.IFile original = input instanceof org.eclipse.ui.IFileEditorInput ? ((org.eclipse.ui.IFileEditorInput) input).getFile() : null;
+	if (original != null) {
+		dialog.setOriginalFile(original);
+	}
+	dialog.create();
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDocumentProvider provider = getDocumentProvider();
+	if (provider == null) {
+		// editor has been programmatically closed while the dialog was open
+		return;
+	}
+	if (provider.isDeleted(input) && original != null) {
+		String message = org.eclipse.osgi.util.NLS.bind(Asdm.diagram.part.Messages.AsdmDiagramEditor_SavingDeletedFile, original.getName());
+		dialog.setErrorMessage(null);
+		dialog.setMessage(message, org.eclipse.jface.dialogs.IMessageProvider.WARNING);
+	}
+	if (dialog.open() == org.eclipse.jface.window.Window.CANCEL) {
+		if (progressMonitor != null) {
+			progressMonitor.setCanceled(true);
+		}
+		return;
+	}
+	org.eclipse.core.runtime.IPath filePath = dialog.getResult();
+	if (filePath == null) {
+		if (progressMonitor != null) {
+			progressMonitor.setCanceled(true);
+		}
+		return;
+	}
+	org.eclipse.core.resources.IWorkspaceRoot workspaceRoot = org.eclipse.core.resources.ResourcesPlugin.getWorkspace().getRoot();
+	org.eclipse.core.resources.IFile file = workspaceRoot.getFile(filePath);
+	final org.eclipse.ui.IEditorInput newInput = new org.eclipse.ui.part.FileEditorInput(file);
+	// Check if the editor is already open
+	org.eclipse.ui.IEditorMatchingStrategy matchingStrategy = getEditorDescriptor().getEditorMatchingStrategy();
+	org.eclipse.ui.IEditorReference[] editorRefs = org.eclipse.ui.PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getEditorReferences();
+	for (int i = 0; i < editorRefs.length; i++) {
+		if (matchingStrategy.matches(editorRefs[i], newInput)) {
+			org.eclipse.jface.dialogs.MessageDialog.openWarning(shell, Asdm.diagram.part.Messages.AsdmDiagramEditor_SaveAsErrorTitle, Asdm.diagram.part.Messages.AsdmDiagramEditor_SaveAsErrorMessage);
+			return;
+		}
+	}
+	boolean success = false;
+	try {
+		provider.aboutToChange(newInput);
+		getDocumentProvider(newInput).saveDocument(progressMonitor, newInput, getDocumentProvider().getDocument(getEditorInput()), true);
+		success = true;
+	} catch (org.eclipse.core.runtime.CoreException x) {
+		org.eclipse.core.runtime.IStatus status = x.getStatus();
+		if (status == null || status.getSeverity() != org.eclipse.core.runtime.IStatus.CANCEL) {
+			org.eclipse.jface.dialogs.ErrorDialog.openError(shell, Asdm.diagram.part.Messages.AsdmDiagramEditor_SaveErrorTitle, Asdm.diagram.part.Messages.AsdmDiagramEditor_SaveErrorMessage, x.getStatus());
+		}
+	} finally {
+		provider.changed(newInput);
+		if (success) {
+			setInput(newInput);
+		}
+	}
+	if (progressMonitor != null) {
+		progressMonitor.setCanceled(!success);
+	}
+}
+		
+			/**
+ * @generated
+ */
+public org.eclipse.ui.part.ShowInContext getShowInContext() {
+	return new org.eclipse.ui.part.ShowInContext(getEditorInput(), getNavigatorSelection());
+}
+			
+	/**
+ * @generated
+ */
+private org.eclipse.jface.viewers.ISelection getNavigatorSelection() {
+	org.eclipse.gmf.runtime.diagram.ui.resources.editor.document.IDiagramDocument document = getDiagramDocument();
+		if (document == null) {
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+org.eclipse.gmf.runtime.notation.Diagram diagram = document.getDiagram();
+if (diagram == null || diagram.eResource() == null) {
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+org.eclipse.core.resources.IFile file = org.eclipse.emf.workspace.util.WorkspaceSynchronizer.getFile(diagram.eResource());
+if (file != null) {
+		Asdm.diagram.navigator.AsdmNavigatorItem item = new Asdm.diagram.navigator.AsdmNavigatorItem(diagram, file, false);
+		return new org.eclipse.jface.viewers.StructuredSelection(item);
+}
+	return org.eclipse.jface.viewers.StructuredSelection.EMPTY;
+}
+	
+		/**
+ * @generated
+ */
+	protected void configureGraphicalViewer() {
+		super.configureGraphicalViewer();
+		Asdm.diagram.part.DiagramEditorContextMenuProvider provider =
+				new Asdm.diagram.part.DiagramEditorContextMenuProvider(this, getDiagramGraphicalViewer());
+		getDiagramGraphicalViewer().setContextMenu(provider);
+		getSite().registerContextMenu(org.eclipse.gmf.runtime.diagram.ui.actions.ActionIds.DIAGRAM_EDITOR_CONTEXT_MENU, provider, getDiagramGraphicalViewer());
+	}
+
+	
+	}

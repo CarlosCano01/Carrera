@@ -1,0 +1,14 @@
+	package Asdm.diagram.part;
+
+	/**
+ * @generated
+ */
+public class AsdmNodeDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor {
+		/**
+ * @generated
+ */
+public AsdmNodeDescriptor(org.eclipse.emf.ecore.EObject modelElement, int visualID) {
+	super(modelElement, visualID);
+}
+
+	}

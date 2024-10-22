@@ -1,0 +1,32 @@
+package Asdm.diagram.part;
+
+/**
+ * @generated
+ */
+public class AsdmDiagramActionBarContributor extends org.eclipse.gmf.runtime.diagram.ui.parts.DiagramActionBarContributor {
+
+	/**
+ * @generated
+ */
+	protected Class getEditorClass() {
+		return Asdm.diagram.part.AsdmDiagramEditor.class;
+	}
+
+	/**
+ * @generated
+ */
+	protected String getEditorId() {
+		return Asdm.diagram.part.AsdmDiagramEditor.ID;
+	}
+	
+	/**
+ * @generated
+ */
+	public void init(org.eclipse.ui.IActionBars bars, org.eclipse.ui.IWorkbenchPage page) {
+		super.init(bars, page);
+		// print preview
+		org.eclipse.jface.action.IMenuManager fileMenu = bars.getMenuManager().findMenuUsingPath(org.eclipse.ui.IWorkbenchActionConstants.M_FILE);
+		assert fileMenu != null;
+		fileMenu.remove("pageSetupAction"); //$NON-NLS-1$
+	}
+	}

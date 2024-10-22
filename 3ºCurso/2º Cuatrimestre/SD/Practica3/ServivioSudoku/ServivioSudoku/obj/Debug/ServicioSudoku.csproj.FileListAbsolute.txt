@@ -1,0 +1,5 @@
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServivioSudoku\obj\Debug\ServicioSudoku.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServivioSudoku\obj\Debug\ServivioSudoku.dll
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServivioSudoku\obj\Debug\ServivioSudoku.pdb
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServivioSudoku\bin\Debug\ServivioSudoku.dll
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServivioSudoku\bin\Debug\ServivioSudoku.pdb

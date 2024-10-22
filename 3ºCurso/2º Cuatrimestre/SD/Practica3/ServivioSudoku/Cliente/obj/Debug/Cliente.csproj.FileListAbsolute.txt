@@ -1,0 +1,10 @@
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\obj\Debug\Cliente.csproj.AssemblyReference.cache
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\obj\Debug\Cliente.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\bin\Debug\Cliente.exe.config
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\bin\Debug\Cliente.exe
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\bin\Debug\Cliente.pdb
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\bin\Debug\ServivioSudoku.dll
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\bin\Debug\ServivioSudoku.pdb
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\obj\Debug\Cliente.csproj.CopyComplete
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\obj\Debug\Cliente.exe
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\Cliente\obj\Debug\Cliente.pdb

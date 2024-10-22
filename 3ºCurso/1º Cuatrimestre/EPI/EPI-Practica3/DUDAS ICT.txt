@@ -1,0 +1,10 @@
+DUDA 1:
+
+-Si tenemos la arqueta de entrada a menos de 30 metros necesitasmos registro de enlace inferior?
+
+-Podemos quitar el registro de enlace superior y conectamos directamente las antenas al rits
+
+ De ser esto así donde comenzaria la canalizacion de enlace
+
+Duda 2:
+que es lo de C7 y C8 en las taridas de los tubos

@@ -1,0 +1,14 @@
+C:\Users\carlo\source\repos\ClienteSW_Sudoki\ClienteSW_Sudoki\obj\Debug\ClienteSW_Sudoki.csproj.AssemblyReference.cache
+C:\Users\carlo\source\repos\ClienteSW_Sudoki\ClienteSW_Sudoki\obj\Debug\ClienteSW_Sudoki.csproj.CoreCompileInputs.cache
+C:\Users\carlo\source\repos\ClienteSW_Sudoki\ClienteSW_Sudoki\bin\Debug\ClienteSW_Sudoki.exe.config
+C:\Users\carlo\source\repos\ClienteSW_Sudoki\ClienteSW_Sudoki\bin\Debug\ClienteSW_Sudoki.exe
+C:\Users\carlo\source\repos\ClienteSW_Sudoki\ClienteSW_Sudoki\bin\Debug\ClienteSW_Sudoki.pdb
+C:\Users\carlo\source\repos\ClienteSW_Sudoki\ClienteSW_Sudoki\obj\Debug\ClienteSW_Sudoki.exe
+C:\Users\carlo\source\repos\ClienteSW_Sudoki\ClienteSW_Sudoki\obj\Debug\ClienteSW_Sudoki.pdb
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica4\ClienteSW_Sudoki\ClienteSW_Sudoki\bin\Debug\ClienteSW_Sudoki.exe.config
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica4\ClienteSW_Sudoki\ClienteSW_Sudoki\bin\Debug\ClienteSW_Sudoki.exe
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica4\ClienteSW_Sudoki\ClienteSW_Sudoki\bin\Debug\ClienteSW_Sudoki.pdb
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica4\ClienteSW_Sudoki\ClienteSW_Sudoki\obj\Debug\ClienteSW_Sudoki.csproj.AssemblyReference.cache
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica4\ClienteSW_Sudoki\ClienteSW_Sudoki\obj\Debug\ClienteSW_Sudoki.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica4\ClienteSW_Sudoki\ClienteSW_Sudoki\obj\Debug\ClienteSW_Sudoki.exe
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica4\ClienteSW_Sudoki\ClienteSW_Sudoki\obj\Debug\ClienteSW_Sudoki.pdb

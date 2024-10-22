@@ -1,0 +1,7 @@
+# Tracing options for the Asdm.diagram plug-in
+
+# Common issues
+Asdm.diagram/debug=false
+
+# Visual IDs
+Asdm.diagram/debug/visualID=false

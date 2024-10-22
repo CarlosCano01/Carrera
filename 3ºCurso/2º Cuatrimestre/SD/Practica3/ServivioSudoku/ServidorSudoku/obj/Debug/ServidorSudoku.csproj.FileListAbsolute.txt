@@ -1,0 +1,10 @@
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\bin\Debug\ServidorSudoku.exe.config
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\bin\Debug\ServidorSudoku.exe
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\bin\Debug\ServidorSudoku.pdb
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\obj\Debug\ServidorSudoku.csproj.AssemblyReference.cache
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\obj\Debug\ServidorSudoku.csproj.CoreCompileInputs.cache
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\obj\Debug\ServidorSudoku.exe
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\obj\Debug\ServidorSudoku.pdb
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\bin\Debug\ServivioSudoku.dll
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\bin\Debug\ServivioSudoku.pdb
+C:\Users\carlo\Desktop\IngInformatica\3º Curso\2º Cuatrimestre\SD\Practica3\ServivioSudoku\ServidorSudoku\obj\Debug\ServidorSudoku.csproj.CopyComplete

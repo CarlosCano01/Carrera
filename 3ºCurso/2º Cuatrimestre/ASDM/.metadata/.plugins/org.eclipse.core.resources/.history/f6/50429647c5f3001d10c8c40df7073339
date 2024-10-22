@@ -1,0 +1,15 @@
+package Asdm.diagram.edit.helpers;
+
+/**
+ * @generated
+ */
+public class AsdmBaseEditHelper extends org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase {
+
+		
+		
+	
+	
+	
+	
+	
+	}

@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Vista;
+
+import java.awt.Component;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author carlo
+ */
+public class VistaMensajes {
+    
+     public int EliminarVuelo(Component c,String mensaje){
+   
+        return JOptionPane.showConfirmDialog(c, mensaje,"Eliminar monitor",JOptionPane.YES_NO_OPTION);
+    }
+     
+     public void Mensaje(Component c,String tipo,String mensaje){
+    
+        switch (tipo) {
+            case "info":
+                    JOptionPane.showMessageDialog(c, mensaje,"INFORMACION",JOptionPane.INFORMATION_MESSAGE);
+                break;
+            case "ERROR":
+                    JOptionPane.showMessageDialog(c, mensaje,"ERROR",JOptionPane.ERROR_MESSAGE);
+                break;
+            default:
+                throw new AssertionError();
+        }
+        
+    }
+}
