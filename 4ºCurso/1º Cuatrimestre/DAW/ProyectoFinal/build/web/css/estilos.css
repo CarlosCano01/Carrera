@@ -1,0 +1,59 @@
+#menuhorizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Color de fondo del menú */
+}
+#menuhorizontal li {
+    float: left;
+}
+#menuhorizontal li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#menuhorizontal li a:hover {
+    background-color: #111;
+}
+
+
+#cabecera {
+    display: flex; /* Utilizar un diseño flexible (flexbox) */
+    align-items: center; /* Centrar verticalmente */
+    background-color: #333; /* Color de fondo del header */
+    padding: 10px; /* Espaciado interno */
+}
+#cabecera img {
+    width: 100px; /* Ancho de la imagen (ajústalo según tus necesidades) */
+    height: auto; /* Mantener la proporción original */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+#cabecera img {
+    width: 100px; /* Ancho de la imagen (ajústalo según tus necesidades) */
+    height: auto; /* Mantener la proporción original */
+    margin-right: 30px; /* Espacio entre la imagen y el texto */
+}
+#cabecera h1 {
+    color: white;
+    text-align: center;
+}
+#pie {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; /* Color de fondo del menú */
+}
+#pie li{
+    color: white;
+    display: inline; /* Hacer que los elementos de la lista estén en línea */
+}
+.derecha {
+            float: right; /* Hacer que el elemento flote a la derecha */
+}
+.izquierda {
+            float: left; /* Hacer que el elemento flote a la derecha */
+        }

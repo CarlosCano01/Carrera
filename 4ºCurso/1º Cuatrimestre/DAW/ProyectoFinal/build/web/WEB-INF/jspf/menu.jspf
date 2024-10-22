@@ -1,0 +1,39 @@
+<%@ page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<header id="cabecera">
+
+    <img src="img/logoAplicacion.jpg" alt="Logo de la aplicación">
+
+    <h1>TITULO APLICACIÓN</h1>
+</header>
+<ul id="menuhorizontal">
+    <li class="derecha"><a href="home">Inicio</a></li>
+        <c:choose>
+            <c:when test="${sessionScope.user!=null}">
+            <li><a href="privado">Privado</a></li>
+            <li><a href="logout">Logout</a></li>
+            </c:when>
+            <c:otherwise> 
+            <li class="izquierda"><a href="alta">Alta</a></li>
+            <!--<li class="izquierda"><a href="login">Login</a></li>-->
+            <li method="POST" action="validar" >
+                
+                        <td align="right">NICK:</td>
+                        <td><input type="text" name="username"></td>
+            </li>
+            <li method="POST" action="validar" >
+                    <table>
+                    <tr>
+                    <tr>
+                        <td align="right">CLAVE: </td>
+                        <td><input type="password" name="password"></td>
+                    </tr>
+                    <tr>
+                    <td></td>
+                    <td><input type="submit" value="Login"></td>
+                </tr>
+                </table>
+            </li>
+            </c:otherwise>
+        </c:choose>
+</ul>

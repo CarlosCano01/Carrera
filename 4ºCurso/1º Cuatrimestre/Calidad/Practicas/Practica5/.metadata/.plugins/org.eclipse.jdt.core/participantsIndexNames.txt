@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\Users\carlo\Desktop\IngInformatica\4º Curso\1 Cuatri\Calidad\Practicas\Practica5\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\191079913.index
+\listatareas\src\main\java
+C:\Users\carlo\Desktop\IngInformatica\4º Curso\1 Cuatri\Calidad\Practicas\Practica5\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4216153162.index
+\listatareas\src\main\java
